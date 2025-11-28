@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Create{
+public class LinearSearch {
     public static void main(String[] args) {
         int arr[] = new int[6];
         Scanner sc = new Scanner(System.in);

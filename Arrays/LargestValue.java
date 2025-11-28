@@ -1,6 +1,19 @@
 import java.util.*;
 
-public class Create{
+public class LargestValue {
+
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE;
+
+        for(int i = 0; i < numbers.length; i ++){
+            if(largest < numbers[i]){
+                largest = numbers[i];
+            }
+        }
+
+        return largest;
+    }
+
     public static void main(String[] args) {
         int arr[] = new int[6];
         Scanner sc = new Scanner(System.in);
@@ -14,15 +27,6 @@ public class Create{
             System.out.println(arr[i] + " ");
         }
 
-        int key = 10;
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i] == key){
-                System.out.println("key element found at index :" + i);
-            }
-            else{
-                System.out.println("Not found");
-            }
-        }
-
+        System.out.println("Largest value is : " + getLargest(arr));
     }
 }
