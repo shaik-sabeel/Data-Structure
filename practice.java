@@ -1,18 +1,22 @@
-import java.util.*;
+public class Practice {
 
-public class practice {
+    public static void subarray(int nums[]){
+        int n = (nums.length * 2) - 1;
+    
+        int arr[] = new int[n];
 
-    public static void check(int num[]) {
-        int curr = 0;
-        while(curr < 0 || curr >= num.length )
-            if(num[curr] != 0){
-                curr++;
-            }
-    }
-
-    public static void main(String[] args) {
-        int arr[] = {1,0,2,0,3};
-        check(arr);
+        for(int i = 0; i <= n; i++){
+            arr[i] = nums[i];
+        }
         
+        for(int i = 0; i <= n; i++){
+            System.out.print(arr[i]);
+        }
+
     }
+    public static void main(String[] args) {
+        int arr[] = {2,4,6,8,10,12};
+        subarray(arr);
+    }
+
 }
