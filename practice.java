@@ -1,22 +1,29 @@
+
+import java.util.*;
+
 public class Practice {
 
-    public static void subarray(int nums[]){
-        int n = (nums.length * 2) - 1;
-    
-        int arr[] = new int[n];
-
-        for(int i = 0; i <= n; i++){
-            arr[i] = nums[i];
+    public static boolean arrayStringsAreEqual(String[] str1, String[] str2) {
+        String ch1 = "";
+        for (int i = 0; i < str1.length; i++) {
+            ch1 = ch1 + str1[i];
         }
-        
-        for(int i = 0; i <= n; i++){
-            System.out.print(arr[i]);
-        }
+        ch1 = ch1.toLowerCase();
 
+        String ch2 = "";
+        for (int i = 0; i < str2.length; i++) {
+            ch2 = ch2 + str2[i];
+        }
+        ch2 = ch2.toLowerCase();
+
+        return ch1.equals(ch2);
     }
+
     public static void main(String[] args) {
-        int arr[] = {2,4,6,8,10,12};
-        subarray(arr);
-    }
 
+        String[] str1 = {"abc", "d", "defg"};
+        String[] str2 = {"abc", "efg"};
+
+        System.out.println(arrayStringsAreEqual(str1, str2));
+    }
 }
