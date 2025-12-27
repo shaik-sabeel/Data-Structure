@@ -14,7 +14,7 @@ public class SumNaturalNumbers {
 
     public static void main(String[] args) {
 
-        System.out.println(sumOfNatural(10));
+        System.out.println(sumOfNatural(5));
         // int var = 0;
         // for (int i = 1; i < 11; i++) {
         //     var += i;
