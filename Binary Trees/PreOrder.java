@@ -35,6 +35,24 @@ public class PreOrder {
         preOrder(root.left);
         preOrder(root.right);
     }
+
+    public static void inorder(Node root){
+        if(root == null){
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.data + " ");
+        inorder(root.right);
+    }   
+
+    public static void postOrder(Node root){
+        if(root == null){
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
+    }
     public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
@@ -42,6 +60,12 @@ public class PreOrder {
         System.out.println(root.data);
         System.out.print("Pre-order traversal: ");
         preOrder(root);
+        System.out.println();
+        System.out.print("In-order traversal: ");
+        inorder(root);
+        System.out.println();
+        System.out.print("Post-order traversal: ");
+        postOrder(root);
         System.out.println();
     }
 }
